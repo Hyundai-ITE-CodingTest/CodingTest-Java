@@ -5,7 +5,7 @@ class Solution {
 	public String[] solution(String[] record) {
 		ArrayList<String> answer = new ArrayList<String>();
 		HashMap<String, String> map = new HashMap<String, String>();
-
+ 
 		// HashMap µø±‚»≠
 		for (int i = 0; i < record.length; i++) {
 			String[] word = record[i].split(" ");
