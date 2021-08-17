@@ -4,40 +4,60 @@
 
 ---
 
-❤️ **고정민**
+⭐ **고정민**
 
 - Github: [https://github.com/Jeongmin-GO](https://github.com/Jeongmin-GO)
 - 백준: [https://www.acmicpc.net/user/plok0](https://www.acmicpc.net/user/plok0)
 
-🧡 **변용혁**
+⭐ **김준태**
+
+- Github: [https://github.com/JJinTae](https://github.com/JJinTae)
+- 백준: [https://www.acmicpc.net/user/emflaxl100](https://www.acmicpc.net/user/emflaxl100)
+
+⭐ **박경무**
+
+- Github: [https://github.com/gyeongmoo97](https://github.com/gyeongmoo97)
+- 백준: [https://www.acmicpc.net/user/mwe226](https://www.acmicpc.net/user/mwe226)
+
+⭐ **변용혁**
 
 - Github: [https://github.com/byeonyh95](https://github.com/byeonyh95)
 - 백준: [https://www.acmicpc.net/user/byeonyh95](https://www.acmicpc.net/user/byeonyh95)
 
-💛 **서민철**
+⭐ **서민철**
 
 - Github: [https://github.com/smc5720](https://github.com/smc5720)
 - 백준: [https://www.acmicpc.net/user/smc5720](https://www.acmicpc.net/user/smc5720)
 
-💚 **원주혜**
+⭐ **서회형**
+
+- Github: [https://github.com/SeoHoeHyeong](https://github.com/SeoHoeHyeong)
+- 백준: [https://www.acmicpc.net/user/shh4190](https://www.acmicpc.net/user/shh4190)
+
+⭐ **원주혜**
 
 - Github: [https://github.com/pithesun](https://github.com/pithesun)
 - 백준: [https://www.acmicpc.net/user/pi_thesun](https://www.acmicpc.net/user/pi_thesun)
 
-💙 **이수정**
+⭐ **이수정**
 
 - Github: [https://github.com/ttujeong](https://github.com/ttujeong)
 - 백준: [https://www.acmicpc.net/user/orgijn](https://www.acmicpc.net/user/orgijn)
 
-💜 **이승엽**
+⭐ **이승엽**
 
 - Github: [https://github.com/seung1110](https://github.com/seung1110)
 - 백준: [https://www.acmicpc.net/user/iiwvii](https://www.acmicpc.net/user/iiwvii)
 
-🖤 **이창현**
+⭐ **이창현**
 
 - Github: [https://github.com/leechang4](https://github.com/leechang4)
 - 백준: [https://www.acmicpc.net/user/dlckdgus205](https://www.acmicpc.net/user/dlckdgus205)
+
+⭐ **허준범**
+
+- Github: [https://github.com/EasyBAMM](https://github.com/EasyBAMM)
+- 백준: [https://www.acmicpc.net/user/huhjb1020](https://www.acmicpc.net/user/huhjb1020)
 
 <br/>
 
@@ -61,7 +81,7 @@
     - `화`, `목` → 백준
 - 모든 문제는 다음 리뷰 전까지 풀어주세요.
 - 코드 리뷰는 문제를 푼 사람들 중 1명이 진행합니다.
-- 코드 리뷰는 오프라인 수업 이후 또는 온라인으로 주 1회 진행합니다.
+- 코드 리뷰는 주 1회 진행하겠습니다.
 
 <br/>
 
