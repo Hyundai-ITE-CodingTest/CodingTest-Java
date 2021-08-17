@@ -15,6 +15,11 @@ public class Main {
 
 		for (int i = 0; i < pw.length(); i++) {
 			int c = pw.charAt(i) + 4;
+			
+			if (c > 'z') {
+				c -= 26;
+			}
+
 			bw.write(c);
 		}
 
