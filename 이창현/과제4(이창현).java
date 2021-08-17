@@ -1,5 +1,3 @@
-package ars;
-
 import java.util.*;
 
 public class Homework4 {
