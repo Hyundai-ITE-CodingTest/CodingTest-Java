@@ -72,7 +72,7 @@
 - `Github Repository` - `Issues` 탭에서 문제 확인하기
 - 문제 풀이 후 `commit` 하기
     - 파일명 예시: `문제이름(홍길동).java`
-    - commit message: `"20210813"`
+    - commit message: `"#11"` 이슈 번호 추가해주세요!
 - `Github Repository` - `Issues` 탭에서 푼 문제 링크 밑에 `comment` 달기
     - 본인이 `commit`한 링크를 올려주시면 됩니다.
 
