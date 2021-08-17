@@ -19,7 +19,11 @@ public class P2 {
 			}
 		}
 
-		System.out.println(sumVal);
-		System.out.println(minVal);
+		if (sumVal == 0) {
+			System.out.println(-1);
+		} else {
+			System.out.println(sumVal);
+			System.out.println(minVal);
+		}
 	}
 }
