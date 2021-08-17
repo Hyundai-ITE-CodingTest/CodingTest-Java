@@ -1,6 +1,4 @@
-package ars;
-
-import java.util.Scanner;
+import java.util.*;
 
 public class Homework3 {
 	public static void main(String[] args) {
