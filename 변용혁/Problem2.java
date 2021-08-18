@@ -1,24 +1,21 @@
-package ex01;
+package ex02;
 
 import java.util.*;
 
 public class Problem2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		List<Integer> list = new ArrayList<Integer>();
+		int start = sc.nextInt();
+		int end = sc.nextInt();
+		int num = sc.nextInt();
 		int sum = 0;
 		
-		for(int i=0; i<7; i++) {
-			int temp = sc.nextInt();
-			if(temp % 2 == 1) {
-				sum += temp;
-				list.add(temp);
+		for(int i=start; i<=end; i++) {
+			if(i % num == 0) {
+				sum += i;
 			}
 		}
 		
 		System.out.println(sum);
-		System.out.println(Collections.min(list));
-		
-		
 	}
 }
