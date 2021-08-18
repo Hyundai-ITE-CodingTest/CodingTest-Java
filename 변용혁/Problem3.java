@@ -1,25 +1,29 @@
-package ex01;
+package ex02;
 
 import java.util.*;
 
 public class Problem3 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int A = sc.nextInt();
-		int B = sc.nextInt();
-		int C = sc.nextInt();
+		int N = sc.nextInt();
+		int sum = 0;
 		
-		String str = Integer.toString(A*B*C);
+		List<Integer> score = new ArrayList<Integer>();
 		
+		for(int i =0 ; i<N; i++) {
+			score.add(sc.nextInt());
+		}
+		sc.nextLine();
 		
-		int[] num = new int [11];
-		for(int i=0; i< str.length(); i++) {
-			int x = (int)(str.charAt(i)) - '0';
-			num[x] += 1;
+		String obst1 = sc.nextLine();
+		String obst2 = sc.nextLine();
+
+		for(int i =0 ; i<N; i++) {
+			if(obst1.charAt(i) == 'O' && obst2.charAt(i) == 'O') {
+				sum += score.get(i);
+			}
 		}
 		
-		for(int i=0; i<10; i++) {
-			System.out.println(num[i]);
-		}
+		System.out.println(sum);
 	}
 }
