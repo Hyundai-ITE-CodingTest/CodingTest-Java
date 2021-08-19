@@ -18,7 +18,6 @@ public class 체스판다시칠하기_1018_변용혁 {
 		for(int i=0; i<N; i++) {
 			board[i] = sc.nextLine();
 		}
-
 		System.out.println(Solution());
 	}
 	public static int Solution() {
