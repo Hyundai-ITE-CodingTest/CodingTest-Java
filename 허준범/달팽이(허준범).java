@@ -52,7 +52,8 @@ public class Main {
 		}
 
 		// System.out.print로 출력하면 시간초과가 뜬다.
-		// BufferedWriter(608ms)보다 StringBuilder(508ms)가 더 빠른듯?
+		// BufferedWriter(584ms)보다 StringBuilder(508ms)가 더 빠른듯?
+		// "데이터 양이 많아지면 StringBuilder 보다 BufferedWriter가 빠르다"라고 합니다! (편한 거 써야지..)
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				if (arr[i][j] == m) {
