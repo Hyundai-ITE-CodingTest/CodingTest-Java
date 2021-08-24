@@ -35,7 +35,7 @@ public class Main {
 			if (line.equals("."))
 				break;
 
-			if (isbalance(line))
+			if (isbalance(line)) // 문자열 균형확인
 				sb.append("yes\n");
 			else
 				sb.append("no\n");
