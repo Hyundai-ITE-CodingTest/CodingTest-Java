@@ -7,6 +7,7 @@ public class Sticker {
     public static void main(String[] args) throws IOException {
         //input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         int Testcase = Integer.parseInt(br.readLine());
         for(int i =0; i < Testcase; i++){
             int N = Integer.parseInt(br.readLine());
@@ -25,15 +26,18 @@ public class Sticker {
         int row = arr.length; int col = arr[0].length;
         int[][] dp = new int[row][col]; //배열값 더한 저장 배열
         //base case : 시작 지점에 따른 최소 대각선 범위
-        dp[0][0] = arr[0][0];
-        dp[1][0] = arr[1][0];
-        dp[0][1] = arr[0][1] + arr[1][0];
-        dp[1][1] = arr[1][1] + arr[0][0];
         //recursive case : 시작 위치와 반대 열, 대각선 이동 2가지
-        for(int i = 2; i< col; i++){
-            dp[0][i] = Math.max(dp[1][i-1], dp[1][i-2]) + arr[0][i];
-            dp[1][i] = Math.max(dp[0][i-1],dp[0][i-2]) + arr[1][i];
+        for(int i = 0; i< col; i++){
+            if(i==0){
+                dp[0][i] = arr[0][i];
+                dp[1][i] = arr[1][i];
+                dp[0][i] = arr[0][i] + dp[i][0];
+                dp[1][i] = arr[1][i] + dp[i-1][0];
+            }else{
+                dp[0][i] = Math.max(dp[1][i-1], dp[1][i-2]) + arr[0][i];
+                dp[1][i] = Math.max(dp[0][i-1],dp[0][i-2]) + arr[1][i];
             }
+        }
         return Math.max(dp[0][col-1],dp[1][col-1]);
     }
 }
