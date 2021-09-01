@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+select ANIMAL_ID, NAME from
+(select o.DATETIME - i.DATETIME ,o.ANIMAL_ID, o.NAME
+    from ANIMAL_INS i, ANIMAL_OUTS o
+    where i.ANIMAL_ID = o.ANIMAL_ID
+    order by o.DATETIME - i.DATETIME desc)
+    
+    where rownum <= 2;
