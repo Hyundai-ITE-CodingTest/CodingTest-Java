@@ -56,6 +56,7 @@ public class 나이트의이동_7562 {
 				for (int d = 0; d < 8; d++) {
 					int nx = p.x + dx[d];
 					int ny = p.y + dy[d];
+					//67번째 줄에서 찾는게 아닌 add 해줄때 dst를 찾으니까 오히려 시간 증가
 					if (0 <= nx && nx < I && 0 <= ny && ny < I && !visit[ny][nx]) {
 						Aque.add(new Point(nx, ny));
 						visit[ny][nx] = true;  // 시간초과 - visit로 해결
