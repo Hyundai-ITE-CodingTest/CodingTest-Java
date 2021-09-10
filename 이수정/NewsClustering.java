@@ -45,7 +45,7 @@ class Solution {
         inter_count = intersection.size();
         union_count = union.size();
         
-        if(inter_count == 0 || union_count ==0){
+        if(inter_count == 0 && union_count ==0){
              return answer = 65536;
         }else{
             return answer = (int)Math.floor((inter_count/union_count) * 65536);
