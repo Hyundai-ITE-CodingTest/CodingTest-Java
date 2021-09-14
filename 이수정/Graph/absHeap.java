@@ -15,8 +15,9 @@ public class absHeap {
                 int abs1 = Math.abs(o1);
                 int abs2 = Math.abs(o2);
                 if (abs1 != abs2) {
-                    if (abs1 < abs2) return -1; // 음수
-                    else return 1; // 양수
+//                     if (abs1 < abs2) return -1; // 음수
+//                     else return 1; // 양수
+                    return abs1 - abs2;
                 } else {//절대값이 동일할 때,
                     if (o1 < o2) return -1; //음수
                     else return 1; //양수
