@@ -17,7 +17,7 @@ public class absHeap {
                 if (abs1 != abs2) {
                     if (abs1 < abs2) return -1; // 음수
                     else return 1; // 양수
-                } else {
+                } else {//절대값이 동일할 때,
                     if (o1 < o2) return -1; //음수
                     else return 1; //양수
                 }
