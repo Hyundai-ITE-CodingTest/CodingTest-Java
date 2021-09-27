@@ -33,6 +33,21 @@ public class 국영수_10825 {
 
 			pq.add(new Score(name, ko, en, ma));
 		}
+		
+//		Arrays.sort(arr, new Comparator<Score>() { 사용해도 성공
+//			@Override
+//			public int compare(Score o1, Score o2) {
+//				if (o1.ko != o2.ko) {
+//					return o2.ko - o1.ko; // 내림차순
+//				} else if (o1.en != o2.en) {
+//					return o1.en - o2.en; // 오름차순
+//				} else if (o1.ma != o2.ma) {
+//					return o2.ma - o1.ma; // 내림차순
+//				} else {
+//					return o1.name.compareTo(o2.name); // 오름차순
+//				}
+//			}
+//		});
 
 		while (pq.size() > 0) { //정렬순서대로 poll하면서 write
 			Score s = pq.poll();
