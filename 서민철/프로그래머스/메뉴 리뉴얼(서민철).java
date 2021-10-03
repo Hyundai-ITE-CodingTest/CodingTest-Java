@@ -11,7 +11,7 @@ class Solution {
 		for (int size : course) {
 			HashMap<String, Integer> map = new HashMap<String, Integer>();
 			int maxVal = 0;
-
+ 
 			for (String od : orders) {
 				DFS(sortString(od), size, size, 0, map);
 			}
