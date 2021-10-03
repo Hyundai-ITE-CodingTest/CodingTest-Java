@@ -6,9 +6,9 @@ class Solution {
         
         //람다식
         //요청 시간 
-		Arrays.sort(jobs, (o1, o2) -> o1[0] - o2[0]);
-		//소요 시간
-		PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
+	Arrays.sort(jobs, (o1, o2) -> o1[0] - o2[0]);
+	//소요 시간
+	PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
 
         int point = 0; //디스크 요청 시점 저장
         int time = 0; // 디스크 종료 작업 저장 
