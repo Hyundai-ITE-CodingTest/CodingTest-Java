@@ -12,7 +12,7 @@ public class boj14888연산자끼워넣기 {
 	static int MAX = Integer.MIN_VALUE;
 	static int[] arr;
 	static int[] cal ;
-	static int n;
+	static int n; 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		n = Integer.parseInt(br.readLine());
 		arr = new int[n];
@@ -30,7 +30,7 @@ public class boj14888연산자끼워넣기 {
 		dfs(1,arr[0]);
 		System.out.println(MAX);
 		System.out.println(MIN);
-		
+		//
 	}
 	public static void dfs(int cur, int num) {
 		if(cur==n) {
