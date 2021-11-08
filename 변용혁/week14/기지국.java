@@ -1,3 +1,5 @@
+package week14;
+
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
@@ -5,7 +7,6 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Solution {
-	static char[][] matrix;
 	static List<Point> home;
 	static List<Point> aa;
 	static List<Point> bb;
@@ -26,7 +27,6 @@ public class Solution {
 
 			st = new StringTokenizer(sc.nextLine());
 			int n = Integer.parseInt(st.nextToken());
-			matrix = new char[n][n];
 
 			for (int i = 0; i < n; i++) {
 				st = new StringTokenizer(sc.nextLine());
@@ -34,7 +34,6 @@ public class Solution {
 				for (int j = 0; j < n; j++) {
 
 					char x = st.nextToken().charAt(0);
-					matrix[i][j] = x;
 					if (x == 'H') {
 						home.add(new Point(j, i));
 					} else if (x == 'A') {
