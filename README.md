@@ -39,6 +39,11 @@
 - Github: [https://github.com/pithesun](https://github.com/pithesun)
 - 백준: [https://www.acmicpc.net/user/pi_thesun](https://www.acmicpc.net/user/pi_thesun)
 
+⭐ **유채연**
+
+- Github: [https://github.com/chaeyeon4u](https://github.com/chaeyeon4u)
+- 백준: [https://www.acmicpc.net/user/cy990426](https://www.acmicpc.net/user/cy990426)
+
 ⭐ **이수정**
 
 - Github: [https://github.com/ttujeong](https://github.com/ttujeong)
