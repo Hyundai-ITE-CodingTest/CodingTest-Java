@@ -4,7 +4,7 @@ import java.util.*;
 class Solution {
     int wordsN=0;
     int eachWordN=0;
-    int answer = 0;
+    int answer = 0; 
     
     public int solution(String begin, String target, String[] words) {
         
