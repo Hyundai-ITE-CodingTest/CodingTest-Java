@@ -19,6 +19,10 @@ public class Main {
 		shuffleSort(array);
 		mergeSort(array, 0, array.length - 1);
 		printSortResult(array, "합병 정렬");
+
+		shuffleSort(array);
+		mergeSort(array, 0, array.length - 1);
+		printSortResult(array, "퀵 정렬");
 	}
 
 	public static void selectionSort(int[] array) {
@@ -114,6 +118,42 @@ public class Main {
 			mergeSort(array, left, mid);
 			mergeSort(array, mid + 1, right);
 			merge(array, left, mid, right);
+		}
+	}
+
+	public static int partition(int[] array, int left, int right) {
+		int pivot = array[left];
+		int low = left + 1;
+		int high = right;
+
+		while (low < high) {
+			while (low <= right && array[low] > pivot) {
+				low += 1;
+			}
+
+			while (low <= right && array[high] < pivot) {
+				right -= 1;
+			}
+
+			if (low < high) {
+				int tmp = array[low];
+				array[low] = array[high];
+				array[high] = tmp;
+			}
+		}
+
+		int tmp = array[left];
+		array[left] = array[high];
+		array[high] = tmp;
+
+		return high;
+	}
+
+	public static void quickSort(int[] array, int left, int right) {
+		if (left < right) {
+			int pivot = partition(array, left, right);
+			quickSort(array, left, pivot - 1);
+			quickSort(array, pivot + 1, right);
 		}
 	}
 
