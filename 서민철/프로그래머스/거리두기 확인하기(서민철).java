@@ -1,82 +1,77 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
+import java.io.*;
 
 class Solution {
-	public int[] solution(String[][] places) {
-		int[] answer = new int[places.length];
+	public class Pos {
+		int y, x, w;
 
-		for (int t = 0; t < places.length; t++) {
+		public Pos(int y, int x, int w) {
+			this.y = y;
+			this.x = x;
+			this.w = w;
+		}
+	}
+
+	public int[] solution(String[][] places) {
+		int[] answer = new int[5];
+
+		// i는 강의실 번호
+		for (int i = 0; i < places.length; i++) {
 			char[][] map = new char[5][5];
 			boolean[][] visited = new boolean[5][5];
-			// state가 true라면 더 이상 탐색할 필요가 없음을 의미한다.
-			boolean state = false;
+
+			// 거리두기를 잘 지키고 있는가?
+			boolean state = true;
 
 			for (int y = 0; y < 5; y++) {
 				for (int x = 0; x < 5; x++) {
-					map[y][x] = places[t][y].charAt(x);
+					map[y][x] = places[i][y].charAt(x);
 					visited[y][x] = false;
 				}
 			}
 
 			for (int y = 0; y < 5; y++) {
 				for (int x = 0; x < 5; x++) {
-					if (map[y][x] == 'P') {
-						if (!check(y, x, map, visited)) {
-							answer[t] = 0;
-							state = true;
-						}
+					if (state && map[y][x] == 'P') {
+						// BFS
+						state = BFS(y, x, map, visited);
 					}
-
-					if (state) {
-						break;
-					}
-				}
-
-				if (state) {
-					break;
 				}
 			}
 
 			if (state) {
-				continue;
+				answer[i] = 1;
+			} else {
+				answer[i] = 0;
 			}
-
-			answer[t] = 1;
 		}
 
 		return answer;
 	}
 
-	// 현재 좌표를 중심으로 거리두기가 잘 되고 있는지를 반환한다.
-	public boolean check(int start_y, int start_x, char[][] map, boolean[][] visited) {
-		int X = 1;
-		int Y = 0;
+	public boolean BFS(int y, int x, char[][] map, boolean[][] visited) {
+		Queue<Pos> queue = new LinkedList<>();
+		queue.add(new Pos(y, x, 0));
+		visited[y][x] = true;
 
-		int[] dirY = { -1, 1, 0, 0 };
-		int[] dirX = { 0, 0, -1, 1 };
-
-		Queue<int[]> queue = new LinkedList<int[]>();
-		int[] pos = { start_y, start_x };
-		visited[start_y][start_x] = true;
-		queue.add(pos);
+		int[] dx = { 0, 0, -1, 1 };
+		int[] dy = { -1, 1, 0, 0 };
 
 		while (!queue.isEmpty()) {
-			// 현재 위치를 저장한다.
-			int[] now_pos = queue.poll();
-			for (int i = 0; i < 4; i++) {
-				// 방문하려는 위치를 저장한다.
-				int tmp_y = now_pos[Y] + dirY[i];
-				int tmp_x = now_pos[X] + dirX[i];
+			Pos p = queue.poll();
 
-				if (visitable(start_y, start_x, tmp_y, tmp_x, visited)) {
-					// 방문이 가능한 위치에 사람이 앉아있다면
-					if (map[tmp_y][tmp_x] == 'P') {
-						// 거리두기가 잘 되지 않고 있는 것이다.
+			for (int i = 0; i < 4; i++) {
+				int ny = p.y + dy[i];
+				int nx = p.x + dx[i];
+
+				if (visitable(ny, nx, visited)) {
+					if (map[ny][nx] == 'P') {
 						return false;
-					} else if (map[tmp_y][tmp_x] == 'O') {
-						visited[tmp_y][tmp_x] = true;
-						int[] tmp = { tmp_y, tmp_x };
-						queue.add(tmp);
+					} else if (map[ny][nx] == 'O') {
+						visited[ny][nx] = true;
+						if (p.w < 1) {
+							queue.add(new Pos(ny, nx, p.w + 1));
+						}
 					}
 				}
 			}
@@ -85,23 +80,7 @@ class Solution {
 		return true;
 	}
 
-	public boolean visitable(int start_y, int start_x, int y, int x, boolean[][] visited) {
-
-		// 이동이 불가능한 위치인가?
-		if (0 > y || y >= 5 || 0 > x || x >= 5) {
-			return false;
-		}
-
-		// 이미 방문한 노드인가?
-		if (visited[y][x]) {
-			return false;
-		}
-
-		// 맨해튼 거리가 3 이상인가?
-		if (Math.abs(start_y - y) + Math.abs(start_x - x) >= 3) {
-			return false;
-		}
-
-		return true;
+	public boolean visitable(int ny, int nx, boolean[][] visited) {
+		return (0 <= nx) && (nx < 5) && (0 <= ny) && (ny < 5) && (!visited[ny][nx]);
 	}
 }
