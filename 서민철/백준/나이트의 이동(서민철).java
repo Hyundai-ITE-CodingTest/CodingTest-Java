@@ -15,7 +15,7 @@ public class Main {
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static boolean[][] visited = new boolean[300][300];
 	static final int Y = 0;
-	static final int X = 1;
+	static final int X = 1; 
 	static final int MOVES = 2;
 	static int mapSize = 0;
 
